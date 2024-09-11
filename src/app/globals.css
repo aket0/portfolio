@@ -19,11 +19,13 @@ header{
   background-color: transparent;
   position: fixed;
   transition: background-color 0.3s ease;
+  z-index: 999;
   
   
 }
-#header.scrolled {
-  backdrop-filter: blur(600px);
+header.scrolled {
+  background-color: #627e9c;
+  border-bottom: none;
  
 }
 
@@ -38,6 +40,7 @@ header > h1{
     width: 33%;
     color: white;
     margin-left: 10px;
+    text-shadow: #627e9c;
     font-family: "Permanent Marker", cursive;
    
   }
@@ -61,21 +64,156 @@ a{
   background-image: url(../../public/img-top.jpg);
   width: 100%;
   height: 1500px;
-  background-size: cover; /* Pour que l'image couvre tout le conteneur */
+  background-size: cover; 
   background-position: bottom;
   background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
+  
 }
 #imgTop > h1{
   font-family: "prata";
   width: 100%;
   display: flex;
-  color: white;
+  color: rgb(255, 255, 255);
   align-self: center;
   align-items: center;
   justify-content: center;
   font-size: 95px;
+}
+#bio{
+    display: flex;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    justify-content: space-evenly;
+    padding: 50px;
+    align-items: center;
+}
+#bio > p {
+    display: flex;
+    width: 35%;
+    font-size: 29px;
+    color: #90ABC0;
+}
+#bio > #img{
+  width: 300px;
+  height: 420px;
+  border-top-left-radius: 180px;
+  border-top-right-radius: 180px;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;}
+#contact{
+  display: flex;
+  background-image: url(../../public/nature-8063737_1920.jpg);
+  width: 100%;
+  height: 1500px;
+  background-size: cover; 
+  background-position: bottom;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+}
+#contactCard{
+  width: 500px;
+  height: 700px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  border: 0.5px solid white;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+#contactCard h2{
+  font-size: 25px;
+  color: white;
+  font-family: "Proza-Libre";
+}
+form{
+  width: 80%;
+  height: 80%;
+  display: flex;
+  font-size: 35px;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+input{
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 25px;
+  color: white;
+  border-bottom: 1px solid white;
+  font-family: "Proza-Libre";
+}
+
+input ::selection{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+textarea{
+  height: 45%;
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 25px;
+  color: white;
+  border-bottom: 1px solid white;
+  font-family: "Proza-Libre";
+}
+button{
+  width: 65%;
+  align-self: center;
+  font-size: 25px;
+  padding: 5px;
+  border-radius: 25px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+ font-family: "Proza-Libre";
+}
+#card{
+  
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 500px;
+  overflow: hidden;
+}
+#card > iframe{
+  height: 80%;
+  width: 100%;
+  border: none;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  overflow: hidden;
+  align-items: center;
+  
+}
+#portfolio{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 1400px;
+  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+
+}
+#cardsHolder{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 120px;
+  height: 800px;
+  justify-content: space-evenly;
+  align-items: center;
+
 }
 
 

@@ -33,24 +33,14 @@ let object = [
     description: "Game of rock, paper and scisor",
     link:"https://rock-paper-cisor.vercel.app/"
   },
-  {
-    name:"LinkTree DIY",
-    type: "Game",
-    description: "All my links in the same place",
-    link:"https://hubertmoyne.pythonanywhere.com/"
-  },
+  
   {
     name:"Black Jack JS ",
     type: "Game",
     description: "Game of blackjack",
     link:"https://blackjack-js-murex.vercel.app/"
   },
-  {
-    name:"Hangman JS",
-    type: "Game",
-    description: "Game of Hangman",
-    link:"https://github/aket0/ecommerce"
-  },
+ 
 ];
 
 const Home: React.FC = () => {
@@ -115,12 +105,22 @@ const Home: React.FC = () => {
       <div id="contact">
         <div id="contactCard">
           <h2>CONTACT</h2>
-          <form method="post">
-            <input type="text" placeholder="Enter your name" />
-            <input type="email" placeholder="Enter your email" />
-            <textarea placeholder="Tell me more about your project"></textarea>
-            <button type="submit">Contact me</button>
-          </form>
+          <form
+  onSubmit={(e) => {
+    e.preventDefault();
+    const name = (e.currentTarget.elements.namedItem("name") as HTMLInputElement).value;
+    const message = (e.currentTarget.elements.namedItem("message") as HTMLTextAreaElement).value;
+    const subject = encodeURIComponent("Demande de contact");
+    const body = encodeURIComponent(`${message}`);
+    const mailtoLink = `mailto:moynehubert@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = mailtoLink;
+  }}
+>
+  <input type="text" name="name" placeholder="Enter your name" />
+  <textarea name="message" placeholder="Tell me more about your project" required></textarea>
+  <button type="submit">Contact me</button>
+</form>
+
         </div>
       </div>
     </div>
